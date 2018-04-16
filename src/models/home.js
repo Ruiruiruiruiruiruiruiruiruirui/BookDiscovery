@@ -8,7 +8,7 @@ import bookList from 'bookList.json'
 export const updateFilter = createAction('Update Filter')
 
 export const updateBookListSaga = createAction('Update Book List Saga')
-const updateBookList = createAction('Update Book List')
+export const updateBookList = createAction('Update Book List')
 
 //fetches
 function fetchBookList () {
