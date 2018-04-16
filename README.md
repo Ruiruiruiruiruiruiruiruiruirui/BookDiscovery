@@ -14,3 +14,7 @@ access page
 ```
 http://localhost:1337/
 ```
+tests
+```
+npm run test
+```
