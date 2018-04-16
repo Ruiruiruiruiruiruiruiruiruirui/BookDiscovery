@@ -40,24 +40,31 @@ const Listings = styled.div`
   padding: 5px;
 `
 
-const AppLayout = ({links, children}) => (
-  <div>
-    <Header>Amazing Books</Header>
-    <FlexContainer>
-      <SideBar>
-        <Navigation links={links}/>
-      </SideBar>
-      <Content>
-        <OptionContainer>
-          <Search />
-          <Options />
-        </OptionContainer>
-        <Listings>
-          {children}
-        </Listings>
-      </Content>
-    </FlexContainer>
-  </div>
-)
+class AppLayout extends Component {
+  componentDidMount() {
+    this.props.updateBookList()
+  }
+  render() {
+    const { links, children } = this.props
+
+    return <div>
+      <Header>Amazing Books</Header>
+      <FlexContainer>
+        <SideBar>
+          <Navigation links={links}/>
+        </SideBar>
+        <Content>
+          <OptionContainer>
+            <Search />
+            <Options />
+          </OptionContainer>
+          <Listings>
+            {children}
+          </Listings>
+        </Content>
+      </FlexContainer>
+    </div>
+  }
+}
 
 export default AppLayout
