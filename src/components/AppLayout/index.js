@@ -17,6 +17,10 @@ const state = state => ({
     {
       label: 'Wishlist',
       linkTo: '/Wishlist'
+    },
+    {
+      label: 'Stopwatch',
+      linkTo: '/Stopwatch'
     }
   ]
 })

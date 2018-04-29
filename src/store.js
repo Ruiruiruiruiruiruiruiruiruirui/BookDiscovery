@@ -7,13 +7,15 @@ import home, { homeSagaWatcher } from 'models/home'
 import favourites from 'models/favourites'
 import wishlist from 'models/wishlist'
 import layout from 'models/layout'
+import stopwatch from 'models/stopwatch'
 
 const rootReducer = combineReducers({
   router: routerReducer,
   home,
   favourites,
   wishlist,
-  layout
+  layout,
+  stopwatch
 })
 
 const reduxRouterMiddleware = routerMiddleware(history)

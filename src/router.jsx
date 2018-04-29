@@ -4,7 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import {
   Home,
   Favourites,
-  Wishlist
+  Wishlist,
+  Stopwatch
 } from './routes'
 import AppLayout from 'components/AppLayout'
 
@@ -23,6 +24,11 @@ export const routes = [
     exact: true,
     path: '/wishlist',
     component: Wishlist
+  },
+  {
+    exact: true,
+    path: '/stopwatch',
+    component: Stopwatch
   }
 ]
 
